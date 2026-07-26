@@ -2,17 +2,17 @@
 
 ## 📌 Project Overview
 
-This project demonstrates how to host a static website using **AWS Amplify**. The website is built using **HTML**, **CSS**, and an image (`docker-compose-lab.png`). AWS Amplify provides secure, scalable, and high-performance hosting backed by Amazon S3 and Amazon CloudFront.
+This project demonstrates how to deploy a **Static Website** using **AWS Amplify**. The website is built with **HTML** and **CSS** and hosted securely using **Amazon S3**, **AWS Amplify**, and **Amazon CloudFront**.
 
 ---
 
 # 🏗️ Architecture
 
-```
+```text
                 Developer
                     │
                     ▼
-        HTML + CSS + Image
+          HTML + CSS + Images
                     │
                     ▼
              AWS Amplify
@@ -24,7 +24,7 @@ This project demonstrates how to host a static website using **AWS Amplify**. Th
           Amazon CloudFront
                     │
                     ▼
-             Live Website
+              Live Website
 ```
 
 ---
@@ -41,12 +41,11 @@ This project demonstrates how to host a static website using **AWS Amplify**. Th
 
 # 📁 Project Structure
 
-```
+```text
 aws-amplify-project/
 │
 ├── index.html
 ├── style.css
-├── docker-compose-lab.png
 └── README.md
 ```
 
@@ -67,8 +66,6 @@ aws-amplify-project/
 
     <p>Website hosted using S3 and Amplify.</p>
 
-    <img src="docker-compose-lab.png" alt="Docker Compose Lab">
-
 </body>
 </html>
 ```
@@ -86,19 +83,13 @@ body{
 h1{
     color:green;
 }
-
-img{
-    width:900px;
-    max-width:100%;
-    margin-top:20px;
-}
 ```
 
 ---
 
 # 🔐 AWS Amplify S3 Bucket Policy
 
-AWS Amplify automatically creates and manages the required S3 bucket policy for the hosting bucket.
+AWS Amplify automatically creates and manages the required bucket policy for its managed S3 bucket.
 
 ```json
 {
@@ -137,7 +128,7 @@ AWS Amplify automatically creates and manages the required S3 bucket policy for 
 }
 ```
 
-> **Note:** AWS Amplify automatically generates and manages this bucket policy. The exact policy differs for each AWS account, application, and branch.
+> **Note:** This policy is automatically created and managed by AWS Amplify. The policy varies depending on your AWS account, application, and deployment branch.
 
 ---
 
@@ -145,45 +136,34 @@ AWS Amplify automatically creates and manages the required S3 bucket policy for 
 
 ### Step 1
 
-Create an S3 bucket.
-
----
+Create an Amazon S3 bucket.
 
 ### Step 2
 
-Upload the following files:
+Upload your static website files:
 
-- index.html
-- style.css
-- docker-compose-lab.png
-
----
+- `index.html`
+- `style.css`
 
 ### Step 3
 
-Create a new AWS Amplify application.
-
----
+Create a new application in AWS Amplify.
 
 ### Step 4
 
-Deploy the website using AWS Amplify.
-
----
+Choose your deployment method (GitHub or Amazon S3).
 
 ### Step 5
 
-Wait for the deployment to complete.
-
----
+Deploy the application and wait for the build to complete.
 
 ### Step 6
 
-Open the generated Amplify URL.
+Access the live website using the generated Amplify URL.
 
 Example:
 
-```
+```text
 https://main.xxxxxxxxx.amplifyapp.com
 ```
 
@@ -192,46 +172,36 @@ https://main.xxxxxxxxx.amplifyapp.com
 # ✨ Features
 
 - Static Website Hosting
-- Responsive Web Page
-- Image Display
-- HTTPS Enabled
+- Secure HTTPS Hosting
+- Amazon S3 Integration
 - CloudFront CDN
 - Fast Deployment
-- Secure Hosting
-
----
-
-# 📷 Output
-
-The hosted website displays:
-
-- Welcome Message
-- Static Web Page
-- Docker Compose Architecture Image
+- Responsive Design
 
 ---
 
 # 📚 Learning Outcomes
 
 - AWS Amplify Hosting
-- Amazon S3 Integration
+- Amazon S3
 - Static Website Deployment
 - HTML & CSS
 - CloudFront CDN
 - HTTPS Hosting
-- AWS Bucket Policy
-- Static Asset Hosting
+- S3 Bucket Policy
+- Secure Static Asset Hosting
 
 ---
 
 # 💡 Key Concepts
 
+- AWS Amplify
+- Amazon S3
+- Amazon CloudFront
 - Static Website Hosting
-- Amazon S3 Object Storage
-- AWS Amplify Hosting
-- CloudFront Content Delivery Network (CDN)
-- Secure HTTPS Deployment
-- AWS Managed Bucket Policies
+- Continuous Deployment
+- HTTPS
+- Bucket Policies
 
 ---
 
